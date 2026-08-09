@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.17.0"
+  version: "0.19.0"
 
 package:
   name: vibepod
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/v/vibepod/vibepod-${{ version }}.tar.gz
-  sha256: f8d5f09fffeee426cb6e81359b2711410727e832612b5d22a69dc5ec847cfad7
+  sha256: 6e75dccc4b9ea52eccd170e79db99c52ed83fbfa3c4acbd303bc0df66b62490a
 
 build:
   number: 0
@@ -34,13 +34,15 @@ requirements:
     - docker-py >=7.0.0
     - pyyaml >=6.0.0
     - platformdirs >=4.0.0
+    # upstream marker is python_version < '3.11'; noarch has one dep set
+    - tomli >=2.0.1
 
 tests:
   - python:
       imports:
         - vibepod
       pip_check: true
-      python_version: 
+      python_version:
         - ${{ python_min }}.*
         - "*"
   - requirements:
