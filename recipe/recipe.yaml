@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.19.0"
+  version: "0.20.0"
 
 package:
   name: vibepod
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/v/vibepod/vibepod-${{ version }}.tar.gz
-  sha256: 6e75dccc4b9ea52eccd170e79db99c52ed83fbfa3c4acbd303bc0df66b62490a
+  sha256: 0b34918f8e85e2cc50c2ebf1281493cf075bc3cef9a483fadb1b14d70f4fe49c
 
 build:
   number: 0
